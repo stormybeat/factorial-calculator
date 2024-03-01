@@ -1,17 +1,25 @@
 import sys
 sys.set_int_max_str_digits(0) # let python convert arbitrarily long numbers into strings. 
 
-
 '''
 to do:
-reformat function "factorial" to use a list
-make an even/odd function to split the factorials in half.
-make the even and odds work on different threads.
+    make an split list function to split the number to make a factorial of in half.
+    make them all use different threads.
 '''
 
+def _em2generateLists(generationInput):
+    generationOutput = []
+    for i in range(1, generationInput + 1):
+        generationOutput.append(i)
+    return generationOutput
 
-def _factorial(num):
-    answer = num
-    for i in range(2,num):
+
+    
+def _em2factorial(listInput):
+    answer = 1
+    for i in listInput:
         answer *= (i)
     return answer
+
+
+print(_em2generateLists(10))

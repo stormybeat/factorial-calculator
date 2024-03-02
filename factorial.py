@@ -15,3 +15,4 @@ def _factorial(num):
     for i in range(2,num):
         answer *= (i)
     return answer
+
